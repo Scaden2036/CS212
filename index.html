@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="UTF-8" name="viewport" content="width = device-width, initial-scale = 1.0">
+        <title>Task Management</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="styles.css"/>
+    </head>
+
+    <body>
+        <!-- WEBSITE LAYOUT -->
+        <div id="mainGrid">
+            
+            <!-- HEADER -->
+            <div id="header">
+               
+                <h1 class="headerTxt main-font">Today's Tasks</h1>
+                
+                <div class="headerFlex">
+                    <img src="icons/funnel_white.svg" class="headerIcons">
+                    <img src="icons/search_white.svg" class="headerIcons">
+                </div>
+
+            </div>
+
+
+            <!-- SIDEBAR -->
+            <div id="sidebar">
+                
+                <div class="sidebarFlex">
+                    <img src="icons/placeholder.png" id="userPhoto">
+                    <img src="icons/house_white.svg" class="sidebarIcons">
+                    <img src="icons/barchart_white.svg" class="sidebarIcons">
+                    <img src="icons/plus_white.svg" class="sidebarIcons">     
+                </div>
+
+            </div>
+
+            <!-- MAIN BODY -->
+            <div id="mainbody">
+                <div class="mainFlex">
+                    <div class="tasks-container" id="tasksContainer">
+                        <!-- Cards will be generated here by JavaScript -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EDIT POPUP -->
+        <div id="popupOverlay">
+            <div id="popupBox">
+                <h2>Edit Task</h2>
+
+                <input type="text" id="editTitle" placeholder="Title">
+                <textarea id="editDescription" placeholder="Description"></textarea>
+
+                <input type="date" id="editDate">
+
+                <select id="editPriority">
+                    <option value="Low">Low</option>
+                    <option value="Medium">Medium</option>
+                    <option value="High">High</option>
+                </select>
+
+                <div class="popupButtons">
+                    <button id="saveBtn">Save</button>
+                    <button id="deleteBtn">Delete</button>
+                    <button id="cancelBtn">Cancel</button>
+                </div>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="app.js"></script>
+    </body>
+   
+</html>
